@@ -7,8 +7,10 @@ const TodoList = ({todos, handleComplete}) => {
        { todos.map((item,index)=>{
         return (
             <div style={{display:"flex"}} key={index}>
-                <li> {item.task}</li>
-              { !item.completed &&  <button onClick={()=>handleComplete(index)}>Complete</button>}
+                <li> {item.task} 
+                      { !item.completed &&  <button onClick={()=>handleComplete(index)}>Complete</button>}
+                </li>
+            
             </div>
         )
        })}
